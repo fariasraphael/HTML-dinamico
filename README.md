@@ -1,5 +1,5 @@
 # HTML DINAMICO
-Repositório destinado a publicaçãoo das aulas de HTML dinamico da ADA SANTANDER CODES
+Repositório destinado a publicação das aulas de HTML dinâmico da ADA SANTANDER CODES
 
 #modal
 criação de um modal em uma página HTML
