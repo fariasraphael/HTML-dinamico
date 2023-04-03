@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/buttons.css">
+    <link rel="stylesheet" href="./css/form-control.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <script src="./js/classes/User.js"></script>
+
+    <title>Cadastro de Usuário</title>
+</head>
+<body>
+    <h1>Cadastro de Clientes</h1>
+
+    <form>
+        <div>
+            <label class="form-label" for="name">Nome</label>
+            <input class="form-input" type="text" name="name" id="name">
+        </div>
+        <div>
+            <label class="form-label" for="age">Idade</label>
+            <input class="form-input" type="text" name="age" id="age">
+        </div>
+        <div>
+            <label class="form-label" for="phone">Telefone</label>
+            <input class="form-input" type="text" name="phone" id="phone">
+        </div>
+        <div>
+            <label class="form-label" for="email">E-mail</label>
+            <input class="form-input" type="text" name="email" id="email">
+            <span class="invalid-email">E-mail inválido</span>
+        </div>
+        <div>
+            <label class="form-label" for="password">Senha</label>
+            <input class="form-input" type="password" name="password" id="password">
+        </div>
+
+        <button type="submit" primary disabled>Cadastrar</button>
+        <button type="reset" secondary>Limpar</button>
+    </form>
+
+    <script src="./js/form-control.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

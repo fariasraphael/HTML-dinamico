@@ -1,0 +1,56 @@
+html {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-flex {
+    display: flex;
+}
+
+form {
+    position: relative;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remove {
+    background-color: var(--color-error);
+    color: #ffffff;
+    border-radius: 8px;
+    border: none;
+    padding: 8px 16px;
+    box-sizing: border-box;
+}
+
+.item-bought {
+    text-decoration: line-through;
+    color: rgb(170, 170, 170);
+}
+
+input[type="checkbox"]{
+    width: 16px;
+    margin-right: 8px;
+}
+
+
+form div {
+    position: relative;
+    margin: 16px 0;
+}
