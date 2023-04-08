@@ -18,7 +18,7 @@ function compara() {
     }
 
     if (!aux) {
-        p.textContent = `${numDois} é maior que ${numUm}`;
+        p.textContent = `${numUm} não é maior que ${numDois}`;;
     }
 
     document.body.appendChild(p);
