@@ -35,6 +35,7 @@ function getUser(login, password) {
 }
 
 async function getUserInfo(login, password) {
+    console.log(await getCats());
     /* getUser(login, password)
         .then(resp => {
             let el = document.createElement('p');
