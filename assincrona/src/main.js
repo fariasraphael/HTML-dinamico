@@ -2,6 +2,8 @@ class User {
     name;
     age;
     weight;
+    login;
+    password;
 
     constructor(name, age, weight) {
         this.name = name;
@@ -20,25 +22,32 @@ async function getCatsData() {
     console.log(aux);
 }
 
-function getUser() {
+function getUser(login, password) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(new User("Raphael", 25, 80));
+            if (login === "raphael@gmail.com" && password === "123") {
+                resolve(new User("Raphael", 25, 80));
+            } else {
+                reject("Login ou senha inválidos")
+            }
         }, 1000);
     });
 }
 
-async function getUserInfo(params) {
-    getUser()
+async function getUserInfo(login, password) {
+    getUser(login, password)
         .then(resp => {
             let el = document.createElement('p');
             el.textContent = JSON.stringify(resp);
             document.body.appendChild(el);
+        }).catch( error => {
+            let el = document.createElement('p');
+            el.textContent = error;
+            document.body.appendChild(el);
         })
+
     /* let user = await getUser();
     let el = document.createElement('p');
     el.textContent = JSON.stringify(user);
     document.body.appendChild(el); */
 }
-
-/* continua em 37:37 */
