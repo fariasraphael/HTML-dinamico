@@ -1,21 +1,44 @@
-class User{
+class User {
     name;
     age;
     weight;
+
+    constructor(name, age, weight) {
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+    }
 }
 
-function getData (callback1) {
-    setTimeout ( () => {
-        callback1 ("callback 1");
-    }, 2000); 
+async function getCats() {
+    const resp = await fetch("https://cat-fact.herokuapp.com/facts");
+    return await resp.json();
 }
 
-function callback1(callback2) {
-    setTimeout ( () => {
-        callback2 ("callback 2");
-    }, 2000);
-}
-
-function callback2 (aux){
+async function getCatsData() {
+    let aux = getCats();
     console.log(aux);
 }
+
+function getUser() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(new User("Raphael", 25, 80));
+        }, 1000);
+    });
+}
+
+async function getUserInfo(params) {
+    getUser()
+        .then(resp => {
+            let el = document.createElement('p');
+            el.textContent = JSON.stringify(resp);
+            document.body.appendChild(el);
+        })
+    /* let user = await getUser();
+    let el = document.createElement('p');
+    el.textContent = JSON.stringify(user);
+    document.body.appendChild(el); */
+}
+
+/* continua em 37:37 */
