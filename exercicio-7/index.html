@@ -10,15 +10,27 @@
 </head>
 
 <body>
-<div class="d-block">
-    
-    <input type="text" id="num1" name="num1" placeholder="Primeiro número"/>
-    <input type="text" id="num2" name="num2" placeholder="Segundo número"/>
-    
-    <button onclick="compara()">Comparar</button>
-    
-    <script src="./main.js"></script>
-</div>
+    <div class="d-block">
+        <p>
+            Verifique se o número
+            <input type="text" id="num1" name="num1" placeholder="digite o número" />
+        </p>
+        <p>
+            está presente entre os números
+            <input type="text" id="num2" name="num2" placeholder="digite um número" />
+            e 
+            <input type="text" id="num3" name="num3" placeholder="digite um número" />
+        </p>
+        <p>
+            <input type="checkbox" value="" id="inclusivo">
+            <label for="inclusivo">incluir o proprio numero</label>
+        </p>
+        <p>
+        <button onclick=" verifica()">Verificar</button>
+        </p>
+
+        <script src=" ./main.js"></script>
+    </div>
 </body>
 
 </html>
