@@ -35,7 +35,7 @@ function getUser(login, password) {
 }
 
 async function getUserInfo(login, password) {
-    getUser(login, password)
+    /* getUser(login, password)
         .then(resp => {
             let el = document.createElement('p');
             el.textContent = JSON.stringify(resp);
@@ -43,8 +43,23 @@ async function getUserInfo(login, password) {
         }).catch( error => {
             let el = document.createElement('p');
             el.textContent = error;
+            el.style.color = "red";
             document.body.appendChild(el);
-        })
+        }) */
+
+    try {
+        let resp = await getUser(login, password);
+
+        let el = document.createElement('p');
+        el.textContent = JSON.stringify(resp);
+        document.body.appendChild(el);
+    } catch (error) {
+        let el = document.createElement('p');
+        el.textContent = error;
+        el.style.color = "red";
+        document.body.appendChild(el);
+
+    }
 
     /* let user = await getUser();
     let el = document.createElement('p');
