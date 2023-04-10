@@ -1,0 +1,36 @@
+button {
+    width: 128px;
+    height: 56px;
+    border: none;
+    background-color: #cccccc;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #acacac;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+.selected {
+    background-color: rgb(153, 153, 226);
+}
+
+#el {
+    width: 128px;
+    height: 56px;
+    border: none;
+    background-color: #cccccc;
+    border-radius: 8px;
+    cursor: move;
+    text-align: center;
+    padding: 16px;
+    box-sizing: border-box;
+}
