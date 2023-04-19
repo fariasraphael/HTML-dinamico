@@ -1,0 +1,9 @@
+.button-cadastrar{
+    background-color: rgb(139,139,239);
+    width: 100px;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+}

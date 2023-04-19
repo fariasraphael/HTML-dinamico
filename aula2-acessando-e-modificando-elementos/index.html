@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Página aleatória</h1>
+    <h2>Titulo</h2>
+    <p>Bem vindo a uma página</p>
+    <p>Olá mundo!</p>
+    <p>Olá mundo 2!</p>
+
+    <div>
+        <label for="nome">Digite seu nome</label>
+        <input type="text" id="name">
+        <button type="button" onclick="sayHi()">Dizer oi</button>
+    </div>
+
+    <script>
+        // function sayHi (){
+        //     let p = document.createElement("p");
+        //     p.textContent = "Olá " + document.getElementById("name").value;
+
+        //     document.body.append(p)
+        // }
+
+        // function sayHi (){
+        //     let label = document.createElement("label");
+        //     let input = document.createElement("input")
+
+        //     input.id = "idade";
+        //     input.type = "text";
+        //     label.textContent = "Idade"
+        //     label.setAttribute("for", "idade");
+
+        //     document.body.appendChild(label);
+        //     document.body.appendChild(input);
+
+        // function sayHi (){
+        // let aux = document.createElement ("h3")
+        // aux.textContent = "e ai galera"
+
+        // document.body.appendChild(aux)
+        // }
+
+        // function sayHi (){
+        //     let aux = document.createElement("p");
+        //     // aux.textContent = "E ai galera, tudo de boa no <b>javascript</b>?"
+        //     // aux.innerHTML = "E ai galera, tudo de boa no <b>javascript</b>?"
+        //     aux.innerHTML = `E ai galera, tudo de 
+
+
+
+
+        //     boa no <b>javascript</b>?`
+        //     document.body.appendChild(aux)
+        // }
+
+        // function sayHi (){
+        //     let aux = document.createElement("div");
+        //     let name = "Raphael"
+        //     aux.innerHTML = `Olá ${name}!`
+        //     document.body.appendChild(aux)
+        // }
+        // function sayHi (){
+        //     let aux = document.createElement("div");
+
+        //     aux.innerHTML = `
+        //     <ul>
+        //         <li>Java</li>
+        //         <li>JS</li>
+        //         <li>Angular</li>
+        //         <li>Spring</li>
+        //         </ul>`
+        //     document.body.appendChild(aux)
+        // }
+
+        // function createList(listItem1, listItem2) {
+        //     return `
+        //     <ul>
+        //         <li> ${listItem1}</li>
+        //         <li> ${listItem2}</li>
+        //     </ul>`;
+        // }
+
+        // function sayHi() {
+        //     let aux = document.createElement("div");
+
+        //     aux.innerHTML = createList("JS", "JAVA");
+        //     document.body.appendChild(aux);
+        // }
+
+        function createList(listItem1, listItem2, divElement) {
+            let ul = document.createElement('ul');
+            let li1 = document.createElement('li');
+            let li2 = document.createElement('li');
+
+            li1.textContent = listItem1;
+            li2.textContent = listItem2;
+
+            ul.appendChild(li1);
+            ul.appendChild(li2);
+
+            divElement.appendChild(ul)
+        }
+
+        function sayHi() {
+            let aux = document.createElement("div");
+
+            createList("JS", "JAVA", aux);
+            document.body.appendChild(aux);
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- 27:00 -->
