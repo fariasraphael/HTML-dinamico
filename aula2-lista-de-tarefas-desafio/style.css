@@ -1,3 +1,14 @@
 body{
     font-family: sans-serif;
 }
+
+li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-finished{
+    text-decoration: line-through;
+    color: rgb(170, 170, 170);
+    
+}
